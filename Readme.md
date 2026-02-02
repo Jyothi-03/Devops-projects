@@ -32,6 +32,8 @@ It supports multiple account types, transaction processing, and maintains a comp
 ---
 
 ## Project Structure
+
+```
 assessment-1/
 ├── account.py           # Account logic and rules
 ├── bank.py              # Bank operations and coordination
@@ -41,7 +43,7 @@ assessment-1/
 ├── test_bank.py          # Unit tests
 └── README.md
 
-
+```
 ---
 
 ## How to Run
