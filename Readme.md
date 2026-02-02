@@ -7,12 +7,15 @@ It supports multiple account types, transaction processing, and maintains a comp
 ---
 
 ## Features
-- Create bank accounts
-- Support for Checking and Savings accounts
+- Create and manage bank accounts
+- Support for **Checking** and **Savings** accounts
 - Deposit, withdraw, and transfer funds
-- Enforce account-specific rules
-- Maintain transaction history
+- Enforce account-specific rules:
+  - Checking: no minimum balance, first 10 transactions per month free, $2.50 fee afterward
+  - Savings: minimum balance $100, max 5 withdrawals per month, earns 2% monthly interest
+- Maintain complete transaction history
 - Generate monthly statements
+- Reject invalid transactions
 - Unit tests included
 
 ---
@@ -78,6 +81,51 @@ Statement for a65f84e4-2b2b-4cfb-b939-80a8bd5abcc7
 Ending Balance: $255.00
 
 ```
+
+
+---
+
+## Testing Objectives Checklist
+
+- [x] Object-oriented design (Account, Transaction, Bank classes)  
+- [x] Collection management (accounts map, transactionHistory list)  
+- [x] Transaction validation (negative balance prevention, account rules enforcement)  
+- [x] State management (monthly transaction counts, savings interest, account balances)
+
+---
+
+## Assignment Requirements Checklist
+
+- [x] Implement **Account**, **Transaction**, and **Bank** classes  
+- [x] Support account types: CHECKING and SAVINGS  
+- [x] Transaction types: DEPOSIT, WITHDRAWAL, TRANSFER  
+- [x] Record transactions with:
+  - transactionId
+  - timestamp
+  - type
+  - amount
+  - balanceBefore
+  - balanceAfter
+  - status (SUCCESS/FAILED with reason)
+- [x] Reject transactions violating account rules (negative balance, withdrawal limits, etc.)  
+- [x] Apply monthly interest for savings accounts  
+- [x] Generate monthly statements showing transactions and ending balance  
+- [x] Demonstrate with at least 4 accounts and 20 transactions (including failed attempts)  
+- [x] Unit tests for all core methods  
+- [x] README includes setup, sample input/output, and assumptions  
+
+---
+
+## Assumptions
+
+- Checking accounts have no minimum balance  
+- Savings accounts must maintain a minimum balance of $100  
+- First 10 transactions per month in checking accounts are free; additional transactions incur $2.50 fee  
+- Savings accounts allow a maximum of 5 withdrawals per month  
+- Monthly interest (2%) is applied only to savings accounts at the end of each month  
+- Transactions that would result in negative balance are rejected  
+- Transaction amounts must be numeric and positive  
+- Transaction history includes all attempts (success and failed)  
 
 ---
 
