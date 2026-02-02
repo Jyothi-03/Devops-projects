@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . /app
 
-# Install Python using pyp
+# Install Python using pip
 RUN apk add --no-cache python3 py3-pip
 
 
