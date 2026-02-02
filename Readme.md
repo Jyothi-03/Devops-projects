@@ -50,16 +50,17 @@ assessment-1/
 
 The demo script creates multiple accounts and performs successful and failed transactions to demonstrate system behavior.
 
-python demo.py
+`python demo.py`
 
 ### Run unit tests
 
 Unit tests are written using Python’s built-in unittest framework.
 
-python -m unittest test_bank.py
+`python -m unittest test_bank.py`
 
 ## Example Output
 
+```
 kappaganthubrahmarambhikajyothi ~ python demo.py                 
 Statement for a65f84e4-2b2b-4cfb-b939-80a8bd5abcc7
 ----------------------------------------
@@ -73,6 +74,8 @@ Statement for a65f84e4-2b2b-4cfb-b939-80a8bd5abcc7
 2026-02-02 22:30:34.764336 | WITHDRAWAL | Amount: $100 | 250 → 250 | FAILED | Reason: Maximum withdrawals exceeded
 2026-02-02 22:30:34.764341 | DEPOSIT | Amount: $5.0 | 250.0 → 255.0 | SUCCESS
 Ending Balance: $255.00
+
+```
 
 ---
 
